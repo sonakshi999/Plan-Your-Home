@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Index</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta content="text/html; charset=iso-8859-2" http-equiv="Content-Type">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+  .xx{
+      font-size:20px; 
+      color:green; 
+      font-weight:bold; 
+      position:absolute;
+                      
+      bottom:0;                          
+      left:50px; 
+  }
+.mySlides {display:none;}
+body{
+  background-color:pink;
+}
+.images {
+  
+  position: relative;
+}
+
+.mySlides {
+  background-color:blue;
+  position: absolute;
+  top: 40%;
+  left: 67%;
+
+  margin: -20px 0 0 -25px; /* apply negative top and left margins to truly center the element */
+}
+</style>
+</head>
+
+<body>
+<div>
+<p style="text-align:center; color:yellow;font-size:40px; text-shadow: 2px 2px #ff0000;
+ ">PLAN YOUR HOME</p>
+</div>
+
+<div class="images" style="max-width:600px" align:center>
+  <img class="mySlides" src="1.png" style="width:100%">
+  <img class="mySlides" src="2.png" style="width:100%" >
+
+  <img class="mySlides" src="4.png" style="width:100%">
+  <img class="mySlides" src="5.png" style="width:100%" >
+ 
+</div>
+ <div class="xx"> 
+    <a href="create.html">Create</a>
+    <a href="View.html">View</a>
+    <h2>Contact US</h2>
+    <p>makeyourhomebeautiful@gmail.com</p>
+  </div>
+
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(carousel, 1000); 
+}
+</script>
+
+
+</body>
+</html>

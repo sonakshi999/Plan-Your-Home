@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Create Design</title>
+  
+  <link href = "https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css"
+         rel = "stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("button").click(function(){
+    
+  var i;
+    for(i=1;i<=6;i++){
+  var div=document.getElementById("resize"+i);
+  var x = document.getElementById("drag"+i);
+  var rect = div.getBoundingClientRect();
+    xx=rect.top;
+    w = rect.width;
+    h = rect.height;
+  document.getElementById("pp"+i).innerHTML=""+x.offsetTop+" "+x.offsetLeft+" "+w+" "+h+" "+xx;
+  }
+  
+  });
+});
+</script>
+      <script src = "https://code.jquery.com/jquery-1.10.2.js"></script>
+      <script src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+
+  <script>
+  $( function() {
+    $( "#drag1" ).draggable();
+$( "#drag2" ).draggable();
+$( "#drag3" ).draggable();
+$( "#drag4" ).draggable();
+$( "#drag5" ).draggable();
+$( "#drag6" ).draggable();
+ $( "#resize1" ).resizable();
+$( "#resize2" ).resizable();
+$( "#resize3" ).resizable();
+$( "#resize4" ).resizable();
+$( "#resize5" ).resizable();
+$( "#resize6" ).resizable();
+
+
+  } );
+   
+</script>
+<style>
+
+</style>
+</head>
+<body>
+<div id="drag1"><img id="resize1" src="bedroom.png"/></div>
+<div id="drag2"><img id="resize2" src="bathroom.png"/></div>
+<div id="drag3"><img id="resize3" src="hall.png"/></div>
+<div id="drag4"><img id="resize4" src="kitchen.png"/></div>
+<div id="drag5"><img id="resize5" src="balcony.png"/></div>
+
+<div id="drag6"><img id="resize6" src="Exit.png"/></div>
+  
+
+
+
+
+<button>Click me to save the design</button>
+
+<p id="pp1"></p>  
+<p id="pp2"></p>
+<p id="pp3"></p>  
+<p id="pp4"></p>
+<p id="pp5"></p>  
+<p id="pp6"></p>
+</body>
+
+</html>
